@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+        string lineinput = Console.ReadLine();
+        string[] zahlenstring = lineinput.Split(' ');
+        int zahl1 = Convert.ToInt32(zahlenstring[0]);
+        int zahl2 = Convert.ToInt32(zahlenstring[1]);
+        int zahl3 = Convert.ToInt32(zahlenstring[2]);
+        int erg = 0;
+        
+        for ( int x=zahl1; x<zahl2+1; x++)
+        {
+            if (zahl1 % zahl3 == 0)
+            {
+                erg=erg+1;
+            }
+        }
+        Console.WriteLine(erg);
+    }
+  }
+}
